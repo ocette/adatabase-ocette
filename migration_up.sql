@@ -1,3 +1,5 @@
+CREATE TYPE resource_type AS ENUM ('guide', 'video', 'exercice', 'projet');
+
 CREATE TABLE themes (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
@@ -5,8 +7,6 @@ CREATE TABLE themes (
   created_at TIMESTAMP,
   updated_at TIMESTAMP
 );
-
-CREATE TYPE resource_type AS ENUM ('guide', 'video', 'exercice', 'projet');
 
 CREATE TABLE resources (
   id SERIAL PRIMARY KEY,
